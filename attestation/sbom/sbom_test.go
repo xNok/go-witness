@@ -71,6 +71,8 @@ func TestAttest(t *testing.T) {
 		{"SPDX 2.2", "./boms/spdx-2.2/", "alpine.spdx-2-2.json", SPDXPredicateType, ""},
 		{"SPDX 2.3", "./boms/spdx-2.3/", "alpine.spdx-2-3.json", SPDXPredicateType, ""},
 		{"CycloneDx", "./boms/cyclonedx-json/", "alpine.cyclonedx.json", CycloneDxPredicateType, ""},
+		{"CycloneDx Trivy", "./boms/cyclonedx-json/", "alpine-trivy.cyclonedx.json", CycloneDxPredicateType, ""},
+
 		{"CycloneDx XML", "./boms/cyclonedx-xml/", "alpine.cyclonedx.xml", Type, "no SBOM file found"},
 		{"Bad JSON", "./boms/bad-json/", "bad.json", SPDXPredicateType, "error unmarshaling SPDX document: invalid character '\\n' in string literal"},
 		{"No JSON", "./boms/emptyDir", "no.json", Type, "no products to attest"},

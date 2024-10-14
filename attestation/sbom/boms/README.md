@@ -12,4 +12,6 @@ These are the commands used to generate the SBOMs comitted:
 
 `syft scan alpine:latest -o cyclonedx > alpine.cyclonedx.xml`
 
+`trivy image --format cyclonedx --output cyclonedx-json/alpine-trivy.cyclonedx.json alpine:latest`
+
 For the `bad.json` modified any of the above json SBOMs to be malformed (just remove a few characters from the end). The modification needs to be after the first 512 bytes of the file due to the method used for mime-type detection.
